@@ -15,15 +15,43 @@ puts "Hello World!"
 #Ask the user for their name and say Hello to them
 puts "Can I have your name?"
 name = gets.chomp
-puts "Hello, ${name}"
+puts "Hello, #{name}"
 
 #TASK: (Intermediate i/o)
 #Ask the user for three numbers and return the average of the number
-puts "I'm going to ask for three numbers"
+#Assume that the user will always enter an integer (No need to validate)
+#(Simplest solution)
+puts "I'm going to ask for three numbers..."
+puts "First?"
+int1 = gets.chomp.to_i
+puts "Second?"
+int2 = gets.chomp.to_i
+puts "Third"
+int3 = gets.chomp.to_i
+puts "Here's the avg:"
+puts int1
+puts int2
+puts int3
+puts ((int1 + int2 + int3).to_f/3)
 
 #TASK: (Advanced i/o)
 #Ask the user for a set of numbers of any size.  When the user is done entering numbers, take the average
-#There are multiple ways that you can do this one.  Put any assumptions that you make in the comments.
+#When the user is done entering numbers, the user will enter a 0
+#Again, assume the user will only enter integers
+#If the user does not, warn the user and discard the input.
+puts "Give me some numbers.  When you're done, type in \"0\""
+input = nil
+array = []
+while input != 0 do
+  input = gets.chomp.to_i
+  array.push(input)
+end
+puts "Here's the avg:"
+total = 0
+array.each do |number|
+  total = total + number
+end
+puts (total.to_f/array.size)
 
 #TASK (Arrays and loops)
 #Create a function that takes in a string as a parameter. 
