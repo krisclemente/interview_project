@@ -8,6 +8,7 @@
 #Complete this function so that it will corretly return true or false for the strings below.
 
 def palindrome(string)
+  puts "is #{string} a palindrome?" 
   (string.length/2).times do |i|
     puts i
     puts "checking if #{string[i]} is equal to #{string[string.length - 1 - i]}"
@@ -18,11 +19,36 @@ def palindrome(string)
   return true
 end
 
-puts "is ABBA a palindrome?"
 puts palindrome('ABBA')
-puts "is FISH a palindrome?"
 puts palindrome('FISH')
-puts "is ABBCBBA a palindrome?"
 puts palindrome('ABBCBBA')
-puts "is ABBBCDBBBA a palindrome?"
 puts palindrome('ABBBCDBBBA')
+
+# ** ANAGRAM **
+# Two strings are considered anagrams if they contain the exact same characters in a different order.
+# An example of two strings that are anagrams are "army" and "mary"
+
+#Below is a ruby function that takes in two strings and returns true if they are anagrams and false otherwise
+
+#Complete this function so that is will correctly return true of false for the strings below
+
+#HINT - feel free to use ruby's 'include?' method. (i.e. 'abc'.include? 'a' => true)
+
+def anagram(string1, string2)
+  puts "Are #{string1} and #{string2} anagrams?"
+  if string1.length != string2.length
+    return false
+  else
+    string1.length.times do |i|
+      if !string2.include? string1[i] 
+        return false
+      end
+    end
+  return true
+  end
+end
+
+puts anagram('mary', 'army')
+puts anagram('dot', 'spot')
+puts anagram('sunny', 'runny')
+puts anagram('wash', 'shaw')
