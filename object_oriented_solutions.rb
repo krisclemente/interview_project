@@ -60,26 +60,42 @@ end
 #Print out 1 through 8 in order
 parent = Parent.new
 child = Child.new
+puts parent.number1
+puts parent.number2
+puts child.number1
+puts child.number2
+parent.change_numbers
+puts parent.number1
+puts parent.number2
+child.change_numbers
+puts child.number1
+puts child.number2
 
 #print out the number 10
 parent = Parent.new
 child = Child.new
+parent.generic_op_2
 
 #print out the number 100
 parent = Parent.new
 child = Child.new
+child.generic_op_2
 
 #print out the number 30
 parent = Parent.new
 child = Child.new
+parent.change_numbers
+parent.multiply
 
 #Print out the number 12
 parent = Parent.new
 child = Child.new
+child.multiply
 
 #Print out the number 13
 parent = Parent.new
 child = Child.new
+parent.generic_op_1
 
 #Print out the number 25
 parent = Parent.new
