@@ -84,5 +84,3 @@ child = Child.new
 #Print out the number 25
 parent = Parent.new
 child = Child.new
-child.change_numbers
-child.generic_op_1
